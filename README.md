@@ -5,8 +5,8 @@ The goal of this project is to create a data pipeline for a Speech-to-Text datas
 ## 1. Installation
   1. **Clone the Repository**
   2. **Create and Activate virtual environment :** 
-     ` ```python -m venv venv
-     venv\Scripts\activate``` ` 
+     - `python -m venv venv`
+     - `venv\Scripts\activate` 
   3. **Install Dependencies :** ```pip install -r requirements.txt```
 
 ## 2. Downloading lectures and transcripts
@@ -43,6 +43,7 @@ The goal of this project is to create a data pipeline for a Speech-to-Text datas
       - `chmod +x processed_audio_wav.sh`
       - `bash processed_audio_wav.sh lectures/ lectures_wav/ 4`, here 4 is the number of cores/cpus to use(can be increased or decreased); `lectures/` is the input directory and `lectures_wav/` is the output directory.
       - Type `exit` to get back to vscode powershell terminal.
+      
       **Alternatively**
       - Open Command Prompt (cmd), type `wsl` and press Enter.
       - Reach the desired directory.
