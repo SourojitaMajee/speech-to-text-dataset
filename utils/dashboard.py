@@ -111,4 +111,4 @@ if uploaded_file is not None:
         duration_chart.update_layout(title="Total Hours vs Utterances")
         st.plotly_chart(duration_chart)
 
-# Run with: `streamlit run dashboard.py`
+# Run with: `streamlit run utils/dashboard.py`
