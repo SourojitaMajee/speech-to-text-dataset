@@ -41,4 +41,4 @@ The goal of this project is to create a data pipeline for a Speech-to-Text datas
  ## Preprocessing Audio
 
  ### Scripts - 
- - **downloaded_lectures_wav.sh :** converts .mp3 to .wav
+ - **downloaded_lectures_wav.sh :** converts .mp3 to .wkjh
