@@ -1,0 +1,31 @@
+lectures/
+lectures_wav/
+lectures_processed_wav/
+lectures_processed/
+transcripts/
+transcripts_processed/
+venv/
+env/
+train_manifest.jsonl
+
+# Python
+__pycache__/
+*.py[cod]
+*.so
+
+# Audio files
+*.mp3
+
+*.json
+*.jsonl
+*.txt
+*.pdf
+*.log
+*.csv
+
+# IDE
+.vscode/
+.idea/
+
+# Environment variables
+.env
