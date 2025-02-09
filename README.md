@@ -84,8 +84,8 @@ The goal of this project is to create a data pipeline for a Speech-to-Text datas
 - **processed_transcripts.py** : preprocesses the transcripts.
 ### How to run :
   ```sh
-        python utils/processed_transcripts.py transcripts/ transcripts_processed/
-        # here `transcripts/` is the input directory and `transcripts_processed/` is the output directory.
+  python utils/processed_transcripts.py transcripts/ transcripts_processed/
+  # here `transcripts/` is the input directory and `transcripts_processed/` is the output directory.
   ```
 ### Observations :
 1. **processed_transcripts.py**
@@ -100,8 +100,8 @@ The goal of this project is to create a data pipeline for a Speech-to-Text datas
  - **manifest_generate.py** : creates the train manifest file
  ### How to run :
   ```sh
-        python utils/manifest_generate.py
-        # here `transcripts_processed/` is the input directory and `train_manifest.jsonl` is the output file.
+  python utils/manifest_generate.py
+  # here `transcripts_processed/` is the input directory and `train_manifest.jsonl` is the output file.
   ```
  ### Observations :
  1. **manifest_generate.py**
