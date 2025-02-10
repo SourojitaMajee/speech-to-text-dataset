@@ -1,12 +1,11 @@
 lectures/
 lectures_wav/
-lectures_processed_wav/
+lectures_wav_trimmed/
 lectures_processed/
 transcripts/
 transcripts_processed/
 venv/
 env/
-train_manifest.jsonl
 
 # Python
 __pycache__/
@@ -17,7 +16,6 @@ __pycache__/
 *.mp3
 
 *.json
-*.jsonl
 *.txt
 *.pdf
 *.log

@@ -2,6 +2,7 @@ import fitz  # PyMuPDF
 import os
 import re
 from num2words import num2words
+from tqdm import tqdm
 
 # Input and output directories
 input_dir = "transcripts"
@@ -62,8 +63,8 @@ def process_pdf(pdf_path, output_txt_path):
     print(f"Processed text saved to: {output_txt_path}")
 
 # Process all PDFs in the input directory in sorted order
-for filename in sorted(os.listdir(input_dir)):
-    if filename.endswith(".pdf"):
-        input_pdf_path = os.path.join(input_dir, filename)
-        output_txt_path = os.path.join(output_dir, filename.replace(".pdf", ".txt"))
-        process_pdf(input_pdf_path, output_txt_path)
+pdf_files = [f for f in sorted(os.listdir(input_dir)) if f.endswith(".pdf")]
+for filename in tqdm(pdf_files, desc="Processing PDFs"):
+    input_pdf_path = os.path.join(input_dir, filename)
+    output_txt_path = os.path.join(output_dir, filename.replace(".pdf", ".txt"))
+    process_pdf(input_pdf_path, output_txt_path)

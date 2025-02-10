@@ -27,7 +27,8 @@ if __name__ == "__main__":
 
     os.makedirs(output_dir, exist_ok=True)
 
-    for filename in os.listdir(input_dir):
+    # Sort the files before processing
+    for filename in sorted(os.listdir(input_dir)):
         if filename.endswith(".wav"):
             input_path = os.path.join(input_dir, filename)
             output_path = os.path.join(output_dir, filename)
