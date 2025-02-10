@@ -39,8 +39,10 @@ with open(OUTPUT_MANIFEST, "w", encoding="utf-8") as manifest:
             # Read transcript content
             with open(transcript_path, "r", encoding="utf-8") as f:
                 transcription = f.read().replace("\n", " ").strip()
+                # Remove multiple spaces
+                transcription = ' '.join(transcription.split())
 
-            # Get audio file duration
+            # audio file duration
             duration = sf.info(audio_path).duration
 
             # Write the entry to the output file

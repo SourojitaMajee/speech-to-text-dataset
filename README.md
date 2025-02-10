@@ -27,18 +27,25 @@ The goal of this project is to create a data pipeline for a Speech-to-Text datas
     ```
 2. **Download Lectures** 
    ```sh
+    # Run the script to download transcripts
     python ./utils/downloaded_lectures.py
+
+    # Paste the URL when prompted and press Enter
     ```
 ### Observations : 
 1. **downloaded_lectures.py**
-   - Navigates the youtube playlist URL.
-   - Downloads leactures audio using ` yt-dlp ` in mp3 format.
+   - Uses `selenium` for web scraping.
+   - Uses `XPATH` to navigate and interact with the elements like weeks, lessons and youtube links(first traverses iframe and then uses anchor tag to get the youtube link).
+   - Downloads leactures audio using ` yt-dlp ` in mp3 format from the youtube links, `tqdm` tracks progress.
    - Saves downloaded lectures in ` lectures/ ` directory.
+ ## Note : **The youtube playlist contains an introductory lecture, so we have to manually delete `0.mp3(the first audio file)` from the `lectures/` folder**
  2. **downloaded_transcripts.py**
     - Uses selenium for web scraping for the course url entered, tqdm and logging for progress and error handling.
-    - Uses relative xpath of the elements to navigate and interact, scrollIntoView(true) to avoid conflicts.
+    - Uses relative `XPATH` of the elements to navigate and interact, scrollIntoView(true) to avoid conflicts.
     - Extracts Google Drive PDF download links and downloads them, Saves files in ` transcripts/ ` directory.
  **The script uses Selenium for web scraping, so Google Chrome and ChromeDriver must be installed.**
+
+ **NOTE : The mp3 lecture audios can be downloaded from the **youtube playlist url - https://www.youtube.com/playlist?list=PLyqSpQzTE6M9gCgajvQbc68Hk_JKGBAYT ** itself, iterating over the playlist and using yt-dlp alone(without selenium), but the lectures are not sequentially arranged in the playlist.**
 
  ## 3. Preprocessing Audio
  ### Scripts : 
@@ -125,7 +132,7 @@ The goal of this project is to create a data pipeline for a Speech-to-Text datas
  1. **dashboard.py**
     - Creates dashboard using streamlit
     - Displays the dashboard with the following metrics:
-        - Key Statistics (total hours, total utterances, total words, total characters)
+        - Key Statistics (total hours - 26.22, total utterances - 117, vocabulary size - 5753, alphabet size - 26)
     - Alphabet in dataset
     - Data distribution using histogram using `Altair` (comapred duration per file, words per file, characters per file with frequency)
     - Observation using `Plotly` in the form of donut charts
