@@ -38,14 +38,13 @@ The goal of this project is to create a data pipeline for a Speech-to-Text datas
    - Uses `XPATH` to navigate and interact with the elements like weeks, lessons and youtube links(first traverses iframe and then uses anchor tag to get the youtube link).
    - Downloads leactures audio using ` yt-dlp ` in mp3 format from the youtube links, `tqdm` tracks progress.
    - Saves downloaded lectures in ` lectures/ ` directory.
- ## Note : **The youtube playlist contains an introductory lecture, so we have to manually delete `0.mp3(the first audio file)` from the `lectures/` folder**
  2. **downloaded_transcripts.py**
     - Uses selenium for web scraping for the course url entered, tqdm and logging for progress and error handling.
     - Uses relative `XPATH` of the elements to navigate and interact, scrollIntoView(true) to avoid conflicts.
     - Extracts Google Drive PDF download links and downloads them, Saves files in ` transcripts/ ` directory.
  **The script uses Selenium for web scraping, so Google Chrome and ChromeDriver must be installed.**
 
- **NOTE : The mp3 lecture audios can be downloaded from the **youtube playlist url - https://www.youtube.com/playlist?list=PLyqSpQzTE6M9gCgajvQbc68Hk_JKGBAYT ** itself, iterating over the playlist and using yt-dlp alone(without selenium), but the lectures are not sequentially arranged in the playlist.**
+  ** NOTE : The mp3 lecture audios can be downloaded from the youtube playlist url - **https://www.youtube.com/playlist?list=PLyqSpQzTE6M9gCgajvQbc68Hk_JKGBAYT** itself, iterating over the playlist and using yt-dlp alone(without selenium), but the lectures are not sequentially arranged in the playlist.**
 
  ## 3. Preprocessing Audio
  ### Scripts : 
@@ -76,7 +75,7 @@ The goal of this project is to create a data pipeline for a Speech-to-Text datas
     ```sh
       python utils/processed_audio.py lectures_wav/ lectures_wav_trimmed/
     
-      # here `lectures_wav/` is the input directory and `lectures_wav_trimmed/` is the output directory.
+    # here `lectures_wav/` is the input directory and `lectures_wav_trimmed/` is the output directory.
     ```
  ### Observations :
  1. **processed_audio_wav.sh** 
@@ -94,7 +93,7 @@ The goal of this project is to create a data pipeline for a Speech-to-Text datas
   ```sh
     python utils/processed_transcripts.py transcripts/ transcripts_processed/
 
-    # here `transcripts/` is the input directory and `transcripts_processed/` is the output directory.
+  # here `transcripts/` is the input directory and `transcripts_processed/` is the output directory.
   ```
 ### Observations :
 1. **processed_transcripts.py**
@@ -111,7 +110,7 @@ The goal of this project is to create a data pipeline for a Speech-to-Text datas
   ```sh
     python utils/manifest_generate.py
 
-    # here `transcripts_processed/` is the input directory and `train_manifest.jsonl` is the output file.
+  # here `transcripts_processed/` is the input directory and `train_manifest.jsonl` is the output file.
   ```
  ### Observations :
  1. **manifest_generate.py**
