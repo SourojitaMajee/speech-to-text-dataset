@@ -137,5 +137,9 @@ The goal of this project is to create a data pipeline for a Speech-to-Text datas
     - Observation using `Plotly` in the form of donut charts
       - Total hours vs Utterances
       - Vocabulary(unique words) vs Alphabet Size(unique characters)
+        
+![Screenshot 2025-02-10 195841](https://github.com/user-attachments/assets/0948ebb2-3dc5-40f0-9527-eada075bd70b)
+
+![Screenshot 2025-02-10 200014](https://github.com/user-attachments/assets/7ebfcab4-575b-4d15-b003-8c319255b9f0)
 
  
