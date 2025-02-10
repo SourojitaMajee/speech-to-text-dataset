@@ -74,7 +74,7 @@ The goal of this project is to create a data pipeline for a Speech-to-Text datas
  3. **processed_audio.py**
     ```sh
       python utils/processed_audio.py lectures_wav/ lectures_wav_trimmed/
-    
+
     # here `lectures_wav/` is the input directory and `lectures_wav_trimmed/` is the output directory.
     ```
  ### Observations :
@@ -93,7 +93,7 @@ The goal of this project is to create a data pipeline for a Speech-to-Text datas
   ```sh
     python utils/processed_transcripts.py transcripts/ transcripts_processed/
 
-  # here `transcripts/` is the input directory and `transcripts_processed/` is the output directory.
+# here `transcripts/` is the input directory and `transcripts_processed/` is the output directory.
   ```
 ### Observations :
 1. **processed_transcripts.py**
@@ -110,7 +110,7 @@ The goal of this project is to create a data pipeline for a Speech-to-Text datas
   ```sh
     python utils/manifest_generate.py
 
-  # here `transcripts_processed/` is the input directory and `train_manifest.jsonl` is the output file.
+# here `transcripts_processed/` is the input directory and `train_manifest.jsonl` is the output file.
   ```
  ### Observations :
  1. **manifest_generate.py**
